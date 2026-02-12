@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry Garima Madam Ji 💖</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 350px;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    color: #444;
+}
+
+button {
+    background: #ff4d6d;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #ff1e4d;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    animation: rise 5s linear infinite;
+    font-size: 20px;
+}
+
+@keyframes rise {
+    0% {
+        bottom: 0;
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>💌 Sorry Garima Madam Ji 💌</h1>
+    <p>
+        I am truly sorry 🙏🥺<br>
+        Please forgive me 💖<br>
+        You mean a lot to me 🌹✨
+    </p>
+    <button onclick="showLove()">Forgive Me? 🥹❤️</button>
+</div>
+
+<script>
+function showLove() {
+    alert("Thank you Garima Madam Ji 💖🥰 You are the best!");
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
